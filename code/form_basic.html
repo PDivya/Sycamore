@@ -360,7 +360,7 @@
                                                             <input type="text" class="form-control" placeholder="software Id">
                                                         </div>
                                                         <div class="col-sm-3 col-sm-offset-3">
-                                                            <button class="btn btn-primary" type="submit">Load</button>
+                                                            <button class="btn btn-primary" type="button" onclick="performClick('theFile');">Load</button>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -379,6 +379,7 @@
                     </div>
                 </div>
             </div>
+                <input type="file" id="theFile" style="display: none;"/>
         </div>
         <div class="footer">
             <div>
@@ -418,7 +419,16 @@
                    /* $("#version").prepend("<option></option>").html(localParamDefined[5]);
                     $("#version1").val(localParamDefined[5]);*/
                 }
+
             });
+            function performClick(elemId) {
+                var elem = document.getElementById(elemId);
+                if(elem && document.createEvent) {
+                    var evt = document.createEvent("MouseEvents");
+                    evt.initEvent("click", true, false);
+                    elem.dispatchEvent(evt);
+                }
+            }
         </script>
 </body>
 
