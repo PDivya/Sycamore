@@ -206,10 +206,8 @@
                 <h5>Availible Software in-house</h5>
             </div>
             <div class="ibox-content">
-            <div class="">
-            <a onclick="fnClickAddRow();" href="javascript:void(0);" class="btn btn-primary ">Add a new Software</a>
-            </div>
-            <table class="table table-striped table-bordered table-hover " id="editable" >
+                <label>Search:<input type="search" class="form-control input-sm" placeholder="" aria-controls="editable"></label>
+            <table class="table table-bordered" id="basic">
             <thead>
             <tr>
                 <th>ECU Type</th>
@@ -219,7 +217,6 @@
                 <th>Current Software Version</th>
                 <th>File Size</th>
                 <th>File Upload Time</th>
-                <th>Last ECU Update Time</th>
             </tr>
             </thead>
             <tbody>
@@ -228,15 +225,20 @@
                 <td>ARB-1234</td>
                 <td>LAR</td>
                 <td>Firmware</td>
-                <td>Abfm_150512.P</td>
+                <td>Abfm_150512 </br><a href="form_basic.html">View details</a></td>
                 <td>150KB</td>
                 <td>23:00 PST 05/12/2015</td>
-                <td>2:00 PST 05/20/2015</td>
             </tr>
 
             </tr>
             </tbody>
             </table>
+                <div class="form-group">
+                    <label>Showing 1 out of 3 Software Files</label>
+                    <div class="col-sm-4 col-sm-offset-10">
+                        <button class="btn btn-success" onclick="fnClickAddRow();" href="javascript:void(0);" type="submit">Add New File</button>
+                    </div>
+                </div>
 
             </div>
             </div>
@@ -283,7 +285,7 @@
             });
 
             /* Init DataTables */
-            var oTable = $('#editable').dataTable();
+            //var oTable = $('#basic').table();
 
             /* Apply the jEditable handlers to the table */
            /* oTable.$('td').editable( '../example_ajax.php', {
@@ -302,9 +304,9 @@
                 "height": "100%"
             } );*/
         //Handle row click
-            oTable.$('tr').click( function () {
-                      var sData = oTable.fnGetData( this );
-                      var url='form_basic.html?'+sData.join('&');
+           $('tr').click( function () {
+                      //var sData = oTable.fnGetData( this );
+                      var url='form_basic.html?';
                         window.location.href=url;
                       } );
                 } );
