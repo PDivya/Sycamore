@@ -7486,3 +7486,7 @@ body.skin-3 {
 #updateManager_filter {
   float: right;
 }
+
+#barChart{
+  height: 210px !important;
+}
