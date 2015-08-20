@@ -6,13 +6,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Movimento  OTA MP | UpdateManager</title>
+    <title>Movimento  OTA MP</title>
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
     <link href="css/plugins/iCheck/custom.css" rel="stylesheet">
     <link href="css/animate.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+
 
 </head>
 
@@ -25,11 +26,11 @@
             <ul class="nav metismenu" id="side-menu">
                 <li class="nav-header">
                     <div class="dropdown profile-element"> <span>
-                            <img alt="image" class="img-circle" src="img/profile_small.jpg" />
+                            <img alt="image" id="profileImage" class="img-circle" src="img/a2.jpg" />
                              </span>
-                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                            <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">Tao Lin</strong>
-                             </span> </span> </a>
+                        <a class="profileName" data-toggle="dropdown" class="dropdown-toggle" href="#">
+                            <span class="clear"> <span id="profile" class="block m-t-xs"> <strong class="font-bold">Chris Smith</strong>
+                             </span> </span> Campaign Manager</a>
                     </div>
                     <div class="logo-element">
                         Movimento  OTA MP
@@ -42,7 +43,7 @@
                     <a href="table_data_tables.html"><i class="fa fa-cube"></i>Software</a>
                 </li>
                 <li>
-                    <a href="widgets.html"><i class="fa fa-database"></i> <span class="nav-label">Update Manager</span></a>
+                    <a href="table_basic.html"><i class="fa fa-database"></i> <span class="nav-label">Manager</span></a>
                 </li>
                 <li>
                     <a href="contacts.html"><i class="fa fa-user"></i> <span class="nav-label">User</span></a>
@@ -179,17 +180,12 @@
         </div>
         <div class="row wrapper border-bottom white-bg page-heading">
             <div class="col-lg-10">
-                <h2>Update Manager</h2>
+                <h2 class="profileName">Campaign Manager Dashboad</h2>
                 <ol class="breadcrumb">
                     <li>
-                        <a href="index.html">Home</a>
+                        <a href="#">View My Campaigns</a>
                     </li>
-                    <li class="active">
-                        <a href="table_basic.html">Update Manager</a>
-                    </li>
-                    <li class="active">
-                        <a href="table_basic.html"><strong>Update Plan</strong></a>
-                    </li>
+
                 </ol>
             </div>
             <div class="col-lg-2">
@@ -200,17 +196,13 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="ibox float-e-margins">
-                        <div>
+                        <div id="chart">
                             <canvas id="barChart" height="210"></canvas>
                         </div>
                         <div class="ibox-title">
-                            <h5 id="updateManagerTitle">Update Software List</h5>
+                            <h5 id="updateManagerTitle">View My Task List</h5>
                             <div id="updateManagerTools" class="ibox-tools">
-                                <div class="col-sm-8" style="display: inline-flex;bottom: 9px;">
-                                    <button class="btn btn-primary upManager" onclick="handleCompaign()">Compaign Creation</button>
-                                    <button class="btn btn-white upManager" onclick="handleDM()">Download Management</button>
-                                    <button class="btn btn-white upManager" onclick="handleProgress()">Check Progress</button>
-                                </div>
+
                             </div>
                         </div>
                         <div class="ibox-content" id="planContent">
@@ -220,32 +212,36 @@
                                     <thead>
                                     <tr>
 
-                                        <th></th>
-                                        <th>Task Name</th>
-                                        <th>Make</th>
-                                        <th>Brand</th>
-                                        <th>Model</th>
-                                        <th>Year</th>
+                                        <th>Select Task</th>
+                                        <th>Task</th>
+                                        <th>Priority</th>
+                                        <th>ECU</th>
                                         <th>ECU ID</th>
-                                        <th>Upload File Version</th>
-                                        <th>OTA Due Time</th>
-                                        <th>Completion Progress</th>
-                                        <th>Propose Time</th>
+                                        <th>Software Type</th>
+                                        <th>Approved  File Version</th>
+                                        <th>Approved File Update Time</th>
                                     </tr>
                                     </thead>
                                     <tbody>
                                     <tr>
                                         <td><input type="checkbox" checked class="i-checks" name="input[]"></td>
-                                        <td>Some Task</td>
-                                        <td>ECU</td>
-                                        <td>Toyota</td>
-                                        <td>camry</td>
-                                        <td>2014</td>
-                                        <td>ECU-2234</td>
-                                        <td>Abfm_150512</td>
-                                        <td>Jul 14, 2013 2:00PM</td>
-                                        <td><span class="pie">0.52/1.561</span></td>
-                                        <td>Jul 14, 2013 2:30PM</td>
+                                        <td>20150812_001</td>
+                                        <td>Critical</td>
+                                        <td>Air Suspension</td>
+                                        <td>RGZ-34N</td>
+                                        <td>Firmware</td>
+                                        <td>AS_20150812.P</td>
+                                        <td>12:00AM PST, 08/22/2015</td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" class="i-checks" name="input[]"></td>
+                                        <td>20150812_002</td>
+                                        <td>Critical</td>
+                                        <td>Airbag</td>
+                                        <td>ARB-1234</td>
+                                        <td>Firmware</td>
+                                        <td>Abfm_50815.P</td>
+                                        <td>12:00PM PST, 08/24/2015</td>
                                     </tr>
                                     </tbody>
                                 </table>
@@ -264,7 +260,28 @@
         </div>
 
     </div>
+    <div class="modal inmodal" id="myModal6" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content animated bounceInRight">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <i class="fa fa-laptop modal-icon"></i>
+                <h4 class="modal-title">Review new campaign you just created</h4>
+                </div>
+            <div class="modal-body">
+                <p><strong>For Critical Task20150812_001, you created Campaign20150815_abs, selected 2000 out of 40000 vehicles with ECU ID RGZ-34N to receive Firmware file version AS_20150812.P with approved update time by 12:00AM PST, 08/22/2015'+
+
+                    Deployment manager Tom Krauss is assigned to deploy Campaign20150815_abs
+                    </p>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-white" data-dismiss="modal">Edit Campaign</button>
+                    <button type="button" class="btn btn-primary">Submit Campaign</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 </div>
+
 
 
 
@@ -356,10 +373,10 @@
             datasets: [
                 {
                     label: "My First dataset",
-                    fillColor: "rgba(220,220,220,0.5)",
-                    strokeColor: "rgba(220,220,220,0.8)",
-                    highlightFill: "rgba(220,220,220,0.75)",
-                    highlightStroke: "rgba(220,220,220,1)",
+                    fillColor: "#1c84c6",
+                    strokeColor: "rgba(240,248,255,0.8)",
+                    highlightFill: "rgba(240,248,255,0.75)",
+                    highlightStroke: "rgba(240,248,255,1)",
                     data: [65, 59, 80, 81, 56, 55, 40]
                 },
                 {
@@ -379,9 +396,9 @@
             scaleGridLineColor: "rgba(0,0,0,.05)",
             scaleGridLineWidth: 1,
             barShowStroke: true,
-            barStrokeWidth: 2,
-            barValueSpacing: 5,
-            barDatasetSpacing: 1,
+            barStrokeWidth: 1,
+            barValueSpacing: 7,
+            barDatasetSpacing: 2,
             responsive: true,
         }
 
@@ -391,6 +408,7 @@
     } );
 
     function handleCompaign(){
+        $("#chart").remove();
         $("#planContent").empty();
         var compaignDiv='<div method="get" class="form-horizontal">'+
                 '<form>'+
@@ -399,10 +417,6 @@
                 '<label class="col-sm-3 control-label">Make:</label>'+
                 '<div class="col-sm-3">'+
                 '<input type="text" class="form-control" placeholder="make">'+
-                '</div>'+
-                '<label class="col-sm-3 control-label">Brand:</label>'+
-                '<div class="col-sm-3">'+
-                '<input type="text" class="form-control" placeholder="brand name">'+
                 '</div>'+
                 '</div>'+
                 '</div>'+
@@ -486,7 +500,7 @@
                 '<option>Time</option>'+
                 '</select>'+
                 '</div>'+
-                '<label class="col-sm-3 control-label">Download Type:</label>'+
+                '<label class="col-sm-3 control-label">Update Type:</label>'+
                 '<div class="col-sm-3">'+
                 '<select class="form-control m-b" name="account">'+
                 '<option>Full</option>'+
@@ -495,14 +509,11 @@
                 '</div>'+
                 '</div>'+
 
-                '<div class="hr-line-dashed"></div>'+
-                '<div class="form-group" style="float: right">'+
-
-                '<button class="btn btn-white upManager" type="submit">Reset</button>'+
-                '<button class="btn btn-success upManager" type="submit">Generate changes</button>'+
-                '<button class="btn btn-success upManager" type="submit">Cancel changes</button>'+
-                '<button class="btn btn-success upManager" type="submit">Submit changes</button>'+
-
+                '<div class="form-group">'+
+                '<div class="col-sm-4 col-sm-offset-8">'+
+                '<button class="btn btn-white" type="submit">Clear Selection</button>'+
+                '<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal6">Save Selection</button>'+
+                '</div>'+
                 '</div>'+
 
                 '</form>'+
@@ -512,9 +523,6 @@
         $("#updateManagerTools").empty();
 
 
-
-    }
-    function handleDM(){
 
     }
 
@@ -589,6 +597,9 @@
     }
 
     function handleDM(){
+        $("#profileName").innerHTML("Deployment Manager");
+        $("#profile").text("Tom Krauss");
+        $("#profileImage").attr("src","img/a4.jpg")
         $("#planContent").empty();
         var progressDiv='<div method="get" class="form-horizontal">'+
                 '<form>'+
