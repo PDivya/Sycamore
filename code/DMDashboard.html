@@ -39,11 +39,11 @@
                 <li>
                     <a href="DMDashboard.html"><i class="fa fa-th-large"></i> <span class="nav-label">Dashboards</span></a>
                 </li>
-<!--                <li>
-                    <a href="table_data_tables.html"><i class="fa fa-cube"></i>Software</a>
-                </li>  -->
+                <!--                <li>
+                                    <a href="table_data_tables.html"><i class="fa fa-cube"></i>Software</a>
+                                </li>  -->
                 <li>
-                    <a href="table_basic.html"><i class="fa fa-database"></i> <span class="nav-label">Tasks</span></a>
+                    <a href="deploymentManager.html"><i class="fa fa-database"></i> <span class="nav-label">Tasks</span></a>
                 </li>
                 <li>
                     <a href="contacts.html"><i class="fa fa-user"></i> <span class="nav-label">My Profile</span></a>
@@ -185,7 +185,7 @@
                 <h2 class="profileName">Deployment Manager</h2>
                 <ol class="breadcrumb">
                     <li>
-                        <a href="#">View My Task</a>
+
                     </li>
 
                 </ol>
@@ -203,50 +203,41 @@
                             </div>
                         </div>
                         <div class="ibox-content" id="planContent">
-                            <label>Search:<input type="search" class="form-control input-sm" placeholder="" aria-controls="editable"></label>
-                            <div class="table-responsive">
-                                <table class="table table-striped table-bordered table-hover " >
-                                    <thead>
-                                    <tr>
+                        <h3>Completed Update - 1700 out of 2000</h3>
+                            <div class="progress progress-striped active" style="height:54px;">
+                                <div style="width: 50%" class="progress-bar progress-bar-success">
+                                    <span class="sr-only">50% Complete (success)</span>
+                                    <h3 style="margin-top: 17px">Success</h3>
+                                </div>
+                                <div style="width: 20%" class="progress-bar progress-bar-warning">
+                                    <span class="sr-only">25% Complete (warning)</span>
+                                    <h3 style="margin-top: 17px">Idle</h3>
+                                </div>
+                                <div style="width: 30%" class="progress-bar progress-bar-danger">
+                                    <span class="sr-only">30% Complete (danger)</span>
+                                    <h3 style="margin-top: 17px">Failure</h3>
+                                </div>
+                            </div>
+                            <h5 align="center">Campaign20150815_xyz Execution Status</h5>
 
-                                        <th>Select</th>
-                                        <th>Task</th>
-                                        <th>Priority</th>
-                                        <th>ECU</th>
-                                        <th>ECU ID</th>
-                                        <th>Software Type</th>
-                                        <th>Approved  File Version</th>
-                                        <th>Approved File Update Due Time</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr>
-                                        <td><input type="checkbox" checked class="i-checks" name="input[]"></td>
-                                        <td>20150812_001</td>
-                                        <td>Critical</td>
-                                        <td>Airbag</td>
-                                        <td>ARB-1234</td>
-                                        <td>Firmware</td>
-                                        <td>Abfm_50815.P</td>
-                                        <td>12:00AM PST, 08/22/2015</td>
-                                    </tr>
-                                    <tr>
-                                        <td><input type="checkbox"  class="i-checks" name="input[]"></td>
-                                        <td>20150812_002</td>
-                                        <td>Critical</td>
-                                        <td>Air Suspension</td>
-                                        <td>RGZ-34N</td>
-                                        <td>Firmware</td>
-                                        <td>AS_20150812.P</td>
-                                        <td>12:00PM PST, 08/24/2015</td>
-                                    </tr>
-                                    </tbody>
-                                </table>
+                            </br>
+                            </br>
+                            </br>
+                            <h3>Completed Update - 2000 out of 2000</h3>
+                            <div class="progress progress-striped active" style="height:54px;">
+                                <div style="width: 100%" class="progress-bar progress-bar-success">
+                                    <span class="sr-only">100% Complete (success)</span>
+                                    <h3 style="margin-top: 17px">Success</h3>
+                                </div>
+                            </div>
+                            <h5 align="center">Campaign20150816_abc Execution Status</h5>
+                            <div class="form-group">
+                                <!--               <label>Showing 1 out of 3 Software Files</label> -->
+                                <div class="col-sm-4 col-sm-offset-8">
+                                    <button class="btn btn-success" style="float: right" type="submit"> Download Report</button>
+                                </div>
                             </div>
 
-                            <div class="col-sm-4 col-sm-offset-10">
-                                <button class="btn btn-success" onclick="fnClickAddRow();" href="javascript:void(0);" type="submit">Schedule</button>
-                            </div>
                         </div>
                     </div>
                 </div>

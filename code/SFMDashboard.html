@@ -10,10 +10,15 @@
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
-    <link href="css/plugins/iCheck/custom.css" rel="stylesheet">
+
+    <!-- Data Tables -->
+    <link href="css/plugins/dataTables/dataTables.bootstrap.css" rel="stylesheet">
+    <link href="css/plugins/dataTables/dataTables.responsive.css" rel="stylesheet">
+    <link href="css/plugins/dataTables/dataTables.tableTools.min.css" rel="stylesheet">
+
     <link href="css/animate.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-
+    <link href="css/plugins/chartist/chartist.min.css" rel="stylesheet">
 
 </head>
 
@@ -26,34 +31,34 @@
             <ul class="nav metismenu" id="side-menu">
                 <li class="nav-header">
                     <div class="dropdown profile-element"> <span>
-                            <img alt="image" id="profileImage" class="img-circle" src="img/a4.jpg" />
+                            <img alt="image" class="img-circle" src="img/a6.jpg" />
                              </span>
-                        <a class="profileName" data-toggle="dropdown" class="dropdown-toggle" href="#">
-                            <span class="clear"> <span id="profile" class="block m-t-xs"> <strong class="font-bold">Tom Krauss</strong>
-                             </span> </span> Deployment Manager</a>
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                            <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">Kate Carton</strong>
+                             </span>Software File Manager</span> </a>
                     </div>
                     <div class="logo-element">
                         Movimento  OTA MP
                     </div>
                 </li>
                 <li>
-                    <a href="DMDashboard.html"><i class="fa fa-th-large"></i> <span class="nav-label">Dashboards</span></a>
+                    <a href="#SFMDashboard.html"><i class="fa fa-th-large"></i> <span class="nav-label">Dashboards</span></a>
                 </li>
-<!--                <li>
-                    <a href="table_data_tables.html"><i class="fa fa-cube"></i>Software</a>
-                </li>  -->
                 <li>
-                    <a href="table_basic.html"><i class="fa fa-database"></i> <span class="nav-label">Tasks</span></a>
+                    <a href="table_data_tables.html"><i class="fa fa-cube"></i>Tasks</a>
                 </li>
+                <!--                  <li>
+                                      <a href="table_basic.html"><i class="fa fa-database"></i> <span class="nav-label">Manager</span></a>
+                                  </li> -->
                 <li>
                     <a href="contacts.html"><i class="fa fa-user"></i> <span class="nav-label">My Profile</span></a>
                 </li>
                 <!--
                 <li>
-                    <a href="#"><i class="fa fa-car"></i>Car</a>
+                    <a href="#"><i class="fa fa-car"></i> <span class="nav-label">Car </span></a>
                 </li>
                 <li>
-                    <a href="#"><i class="fa fa-exclamation-triangle"></i> <span class="nav-label">Conflict</span> </a>
+                    <a href=#"><i class="fa fa-exclamation-triangle"></i> <span class="nav-label">Conflict</span></a>
                 </li>
                 -->
             </ul>
@@ -71,7 +76,9 @@
                             <input type="text" placeholder="Search for something..." class="form-control" name="top-search" id="top-search">
                         </div>
                     </form>
+
                 </div>
+
                 <ul class="nav navbar-top-links navbar-right">
                     <li class="dropdown">
                         <!--
@@ -169,8 +176,8 @@
                             </li>
                         </ul>
                     </li>
+    -->
 
--->
                     <li>
                         <a href="login.html">
                             <i class="fa fa-sign-out"></i> Log out
@@ -182,12 +189,11 @@
         </div>
         <div class="row wrapper border-bottom white-bg page-heading">
             <div class="col-lg-10">
-                <h2 class="profileName">Deployment Manager</h2>
+                <h2>Software File Manager</h2>
                 <ol class="breadcrumb">
                     <li>
-                        <a href="#">View My Task</a>
+                        <a href="#">Files Uploaded by Me</a>
                     </li>
-
                 </ol>
             </div>
             <div class="col-lg-2">
@@ -199,68 +205,25 @@
                 <div class="col-lg-12">
                     <div class="ibox float-e-margins">
                         <div class="ibox-title">
-                            <div id="updateManagerTools" class="ibox-tools">
-                            </div>
+                            <h3><b>Number Of Vechile vs. Priority. </b></h3>
                         </div>
-                        <div class="ibox-content" id="planContent">
-                            <label>Search:<input type="search" class="form-control input-sm" placeholder="" aria-controls="editable"></label>
-                            <div class="table-responsive">
-                                <table class="table table-striped table-bordered table-hover " >
-                                    <thead>
-                                    <tr>
-
-                                        <th>Select</th>
-                                        <th>Task</th>
-                                        <th>Priority</th>
-                                        <th>ECU</th>
-                                        <th>ECU ID</th>
-                                        <th>Software Type</th>
-                                        <th>Approved  File Version</th>
-                                        <th>Approved File Update Due Time</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr>
-                                        <td><input type="checkbox" checked class="i-checks" name="input[]"></td>
-                                        <td>20150812_001</td>
-                                        <td>Critical</td>
-                                        <td>Airbag</td>
-                                        <td>ARB-1234</td>
-                                        <td>Firmware</td>
-                                        <td>Abfm_50815.P</td>
-                                        <td>12:00AM PST, 08/22/2015</td>
-                                    </tr>
-                                    <tr>
-                                        <td><input type="checkbox"  class="i-checks" name="input[]"></td>
-                                        <td>20150812_002</td>
-                                        <td>Critical</td>
-                                        <td>Air Suspension</td>
-                                        <td>RGZ-34N</td>
-                                        <td>Firmware</td>
-                                        <td>AS_20150812.P</td>
-                                        <td>12:00PM PST, 08/24/2015</td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-
-                            <div class="col-sm-4 col-sm-offset-10">
-                                <button class="btn btn-success" onclick="fnClickAddRow();" href="javascript:void(0);" type="submit">Schedule</button>
-                            </div>
+                        <div class="ibox-content">
+                            <img src="img/SFChart.png"  style="height: 390px !important;">
                         </div>
+
+                        <button class="btn btn-success" style="float: right" type="submit"> Download Report</button>
                     </div>
                 </div>
-
             </div>
+
+
         </div>
         <div class="footer">
             <div>
-                <strong>Copyright</strong> Movimento Group &copy; 2015
+                <strong>Copyright</strong> Movimento Group &copy;2015
             </div>
         </div>
-
     </div>
-
 
 
 
@@ -269,57 +232,121 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
     <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
-
-    <!-- Peity -->
-    <script src="js/plugins/peity/jquery.peity.min.js"></script>
-
-    <!-- Custom and plugin javascript -->
-    <script src="js/inspinia.js"></script>
-    <script src="js/plugins/pace/pace.min.js"></script>
-
-    <!-- iCheck -->
-    <script src="js/plugins/iCheck/icheck.min.js"></script>
-
-    <!-- Peity -->
-    <script src="js/demo/peity-demo.js"></script>
+    <script src="js/plugins/jeditable/jquery.jeditable.js"></script>
 
     <!-- Data Tables -->
     <script src="js/plugins/dataTables/jquery.dataTables.js"></script>
     <script src="js/plugins/dataTables/dataTables.bootstrap.js"></script>
     <script src="js/plugins/dataTables/dataTables.responsive.js"></script>
     <script src="js/plugins/dataTables/dataTables.tableTools.min.js"></script>
-    <!-- ChartJS-->
-    <!-- Flot -->
-    <script src="js/plugins/flot/jquery.flot.js"></script>
-    <script src="js/plugins/flot/jquery.flot.tooltip.min.js"></script>
-    <script src="js/plugins/flot/jquery.flot.spline.js"></script>
-    <script src="js/plugins/flot/jquery.flot.resize.js"></script>
-    <script src="js/plugins/flot/jquery.flot.pie.js"></script>
-    <!-- jQuery UI -->
-    <script src="js/plugins/jquery-ui/jquery-ui.min.js"></script>
 
-    <!-- GITTER -->
-    <script src="js/plugins/gritter/jquery.gritter.min.js"></script>
+    <!-- Chartist -->
+    <script src="js/plugins/chartist/chartist.min.js"></script>
 
-    <!-- Sparkline -->
-    <script src="js/plugins/sparkline/jquery.sparkline.min.js"></script>
+    <!-- Custom and plugin javascript -->
+    <script src="js/inspinia.js"></script>
+    <script src="js/plugins/pace/pace.min.js"></script>
 
-    <!-- Sparkline demo data  -->
-    <script src="js/demo/sparkline-demo.js"></script>
-    <script src="js/plugins/chartJs/Chart.min.js"></script>
-
-
+    <!-- Page-Level Scripts -->
     <script>
         $(document).ready(function() {
+            $('.dataTables-example').dataTable({
+                responsive: true,
+                "dom": 'T<"clear">lfrtip',
+                "tableTools": {
+                    "sSwfPath": "js/plugins/dataTables/swf/copy_csv_xls_pdf.swf"
+                }
+            });
+
+            /* Init DataTables */
+            //var oTable = $('#basic').table();
+
+            /* Apply the jEditable handlers to the table */
+            /* oTable.$('td').editable( '../example_ajax.php', {
+             "callback": function( sValue, y ) {
+             var aPos = oTable.fnGetPosition( this );
+             oTable.fnUpdate( sValue, aPos[0], aPos[1] );
+             },
+             "submitdata": function ( value, settings ) {
+             return {
+             "row_id": this.parentNode.getAttribute('id'),
+             "column": oTable.fnGetPosition( this )[2]
+             };
+             },
+
+             "width": "90%",
+             "height": "100%"
+             } );*/
+            //Handle row click
+
+            // Stocked bar chart
+
+            new Chartist.Bar('#ct-chart3', {
+                labels: ['Critical', 'Recommended', 'Optional', 'Background'],
+                series: [
+                    [800000, 1200000, 1400000, 1300000],
+                    [200000, 400000, 500000, 300000],
+                    [100000, 200000, 400000, 600000]
+                ]
+            }, {
+                stackBars: true,
+                axisY: {
+                    labelInterpolationFnc: function(value) {
+                        return (value / 10000) + 'k';
+                    },
+
+
+                }
+            }).on('draw', function(data) {
+                        if(data.type === 'bar') {
+                            data.element.attr({
+                                style: 'stroke-width: 30px'
+                            });
+                        }
+                    });
 
             $('tr').click( function () {
                 //var sData = oTable.fnGetData( this );
-                var url='DeploymentManagerDetail.html?';
+                var url='form_basic.html?';
                 window.location.href=url;
             } );
         } );
-    </script>>
 
+        function fnClickAddRow() {
+            window.location.href="form_basic.html?";
+
+        }
+    </script>
+    <style>
+        body.DTTT_Print {
+            background: #fff;
+
+        }
+        .DTTT_Print #page-wrapper {
+            margin: 0;
+            background:#fff;
+        }
+
+        button.DTTT_button, div.DTTT_button, a.DTTT_button {
+            border: 1px solid #e7eaec;
+            background: #fff;
+            color: #676a6c;
+            box-shadow: none;
+            padding: 6px 8px;
+        }
+        button.DTTT_button:hover, div.DTTT_button:hover, a.DTTT_button:hover {
+            border: 1px solid #d2d2d2;
+            background: #fff;
+            color: #676a6c;
+            box-shadow: none;
+            padding: 6px 8px;
+        }
+
+        .dataTables_filter label {
+            margin-right: 5px;
+
+        }
+    </style>
 </body>
 
 </html>
