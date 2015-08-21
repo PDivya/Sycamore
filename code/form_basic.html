@@ -41,21 +41,22 @@
                         <a href="index.html"><i class="fa fa-th-large"></i> <span class="nav-label">Dashboards</span></a>
                     </li>
                     <li>
-                        <a href="table_data_tables.html"><i class="fa fa-cube"></i>Software</a>
+                        <a href="table_data_tables.html"><i class="fa fa-cube"></i>Tasks</a>
                     </li>
-                    <li>
+ <!--                   <li>
                         <a href="table_basic.html"><i class="fa fa-database"></i> <span class="nav-label">Update Manager</span></a>
-                    </li>
+                    </li> -->
                     <li>
-                        <a href="#"><i class="fa fa-user"></i> <span class="nav-label">User</span></a>
+                        <a href="#"><i class="fa fa-user"></i> <span class="nav-label">My Profile</span></a>
                     </li>
+                    <!--
                     <li>
                         <a href="#"><i class="fa fa-car"></i> <span class="nav-label">Car </span></a>
                     </li>
                     <li>
                         <a href="#"><i class="fa fa-exclamation-triangle"></i> <span class="nav-label">Conflict</span> </a>
                     </li>
-
+                    -->
                 </ul>
 
             </div>
@@ -75,6 +76,7 @@
             <ul class="nav navbar-top-links navbar-right">
 
                 <li class="dropdown">
+                    <!--
                     <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
                         <i class="fa fa-envelope"></i>  <span class="label label-warning">16</span>
                     </a>
@@ -170,7 +172,7 @@
                     </ul>
                 </li>
 
-
+-->
                 <li>
                     <a href="login.html">
                         <i class="fa fa-sign-out"></i> Log out
@@ -223,37 +225,37 @@
                                     <div class="col-sm-10">
                                         <label class="col-sm-3 control-label">ECU</label>
                                         <div class="col-sm-3">
-                                            <input type="text" class="form-control" placeholder="ECU" value="Airbag">
+                                            <input type="text" disabled="" class="form-control" placeholder="Airbag">
                                         </div>
                                         <label class="col-sm-3 control-label">ECU Id</label>
                                         <div class="col-sm-3">
-                                            <input type="text" class="form-control" placeholder="Id" value="ARB-1234">
+                                            <input type="text" disabled="" class="form-control" placeholder="ARB-1234">
                                         </div>
                                     </div>
                                 </div>
 
                                 <div class="form-group">
                                     <div class="col-sm-10">
-                                        <label class="col-sm-3 control-label">SWID</label>
+                                        <label class="col-sm-3 control-label">Software Type</label>
                                         <div class="col-sm-3">
-                                            <input type="text" class="form-control" placeholder="software Id" value="soft-1234">
+                                            <input type="text" disabled="" class="form-control" placeholder="Firmware">
                                         </div>
                                         <label class="col-sm-3 control-label">Software Provider</label>
                                         <div class="col-sm-3">
-                                            <input type="text" class="form-control" placeholder="software provider" value="xyz">
+                                            <input type="text" disabled="" class="form-control" placeholder="LAR">
                                         </div>
                                     </div>
                             </div>
 
                                 <div class="form-group">
                                     <div class="col-sm-10">
-                                        <label class="col-sm-3 control-label">Approved Update Time</label>
+                                        <label class="col-sm-3 control-label">Last Approved Update Time</label>
                                         <div class="col-sm-3">
-                                            <input type="text" class="form-control" placeholder="time">
+                                            <input type="text" disabled="" class="form-control" placeholder="12:00AM PST, 08/22/2015">
                                         </div>
                                         <label class="col-sm-3 control-label">Current Version</label>
                                         <div class="col-sm-3">
-                                            <input type="text" disabled="" placeholder="Abfm_150812" class="form-control">
+                                            <input type="text" disabled="" placeholder="Abfm_150512" class="form-control">
                                         </div>
                                     </div>
                                 </div>
@@ -284,12 +286,14 @@
                                                 <div class="form-group">
                                                     <div class="col-sm-10">
                                                         <label class="col-sm-3 control-label">New File Version:</label>
-                                                        <div class="col-sm-3">
-                                                            <input type="text" class="form-control" placeholder="Version">
+                                                        <div class="col-sm-2">
+                                                            <input type="text" class="form-control" placeholder="Version" value="Abfm_150815">
+
                                                         </div>
+                                                        <button class="col-sm-1 btn btn-primary" type="button" onclick="performClick('theFile');">Change</button>
                                                         <label class="col-sm-3 control-label">New File Size</label>
                                                         <div class="col-sm-3">
-                                                            <input type="text" class="form-control" placeholder="size">
+                                                            <input type="text" disabled="" class="form-control" placeholder="160K">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -297,7 +301,7 @@
                                                     <div class="col-sm-10">
                                                         <label class="col-sm-3 control-label">Recommend File Update Time</label>
                                                         <div class="col-sm-3">
-                                                            <input type="text" class="form-control" placeholder="time">
+                                                            <input type="text" class="form-control" placeholder="time", value="12:00AM PST, 08/22/2015">
                                                         </div>
                                                         <label class="col-sm-3 control-label">Recommend Priority:</label>
                                                         <div class="col-sm-3">
@@ -309,20 +313,13 @@
                                                 </div>
                                                 <div class="form-group">
                                                     <div class="col-sm-10">
-                                                        <label class="col-sm-3 control-label">Partial file Size</label>
+                                                        <label class="col-sm-3 control-label">Partial File Size</label>
                                                         <div class="col-sm-3">
-                                                            <input type="text" class="form-control" placeholder="size">
+                                                            <input type="text" disabled="" class="form-control" placeholder="10K">
                                                         </div>
-                                                        <label class="col-sm-3 control-label">Partial file Name</label>
+                                                        <label class="col-sm-3 control-label">Partial File Name</label>
                                                         <div class="col-sm-3">
-                                                            <input type="text" class="form-control" placeholder="name">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <div class="col-sm-10">
-                                                        <div class="col-sm-3">
-                                                            <button class="btn btn-primary" type="button" onclick="performClick('theFile');">Change</button>
+                                                            <input type="text" disabled="" class="form-control" placeholder="Abfm_150815.P">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -342,15 +339,16 @@
             </div>
                 <input type="file" id="theFile" style="display: none;"/>
         </div>
-        <div class="footer">
-            <div>
-                <strong>Copyright</strong> Movimento Group &copy;2015
+
+
+        </div>
+            <div class="footer">
+                <div>
+                    <strong>Copyright</strong> Movimento Group &copy; 2015
+                </div>
             </div>
-        </div>
 
         </div>
-        </div>
-
 
     <!-- Mainly scripts -->
     <script src="js/jquery-2.1.1.js"></script>

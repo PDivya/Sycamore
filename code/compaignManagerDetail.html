@@ -40,22 +40,23 @@
                 <li>
                     <a href="index.html"><i class="fa fa-th-large"></i> <span class="nav-label">Dashboards</span></a>
                 </li>
-                <li>
+ <!--               <li>
                     <a href="table_data_tables.html"><i class="fa fa-cube"></i>Software</a>
+                </li>   -->
+                <li>
+                    <a href="table_basic.html"><i class="fa fa-database"></i> <span class="nav-label">Tasks</span></a>
                 </li>
                 <li>
-                    <a href="table_basic.html"><i class="fa fa-database"></i> <span class="nav-label">Manager</span></a>
+                    <a href="contacts.html"><i class="fa fa-user"></i> <span class="nav-label">My Profile</span></a>
                 </li>
-                <li>
-                    <a href="contacts.html"><i class="fa fa-user"></i> <span class="nav-label">User</span></a>
-                </li>
+                <!--
                 <li>
                     <a href="#"><i class="fa fa-car"></i>Car</a>
                 </li>
                 <li>
                     <a href="#"><i class="fa fa-exclamation-triangle"></i> <span class="nav-label">Conflict</span> </a>
                 </li>
-
+                -->
             </ul>
 
         </div>
@@ -73,8 +74,8 @@
                     </form>
                 </div>
                 <ul class="nav navbar-top-links navbar-right">
-
                     <li class="dropdown">
+                        <!--
                         <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
                             <i class="fa fa-envelope"></i>  <span class="label label-warning">16</span>
                         </a>
@@ -170,7 +171,7 @@
                         </ul>
                     </li>
 
-
+-->
                     <li>
                         <a href="login.html">
                             <i class="fa fa-sign-out"></i> Log out
@@ -209,6 +210,30 @@
                             <form>
                                 <div class="form-group">
                                     <div class="col-sm-10">
+                                        <label class="col-sm-3 control-label">ECU ID:</label>
+                                        <div class="col-sm-3">
+                                            <input type="text" disabled="" class="form-control" placeholder="ARB-1234">
+                                        </div>
+                                        <label class="col-sm-3 control-label">Approved Update File:</label>
+                                        <div class="col-sm-3">
+                                        <input type="text" disabled="" class="form-control" placeholder="Abfm_50815.P">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-10">
+                                        <label class="col-sm-3 control-label">Approved Priority:</label>
+                                        <div class="col-sm-3">
+                                            <input type="text" disabled="" class="form-control" placeholder="Critical">
+                                        </div>
+                                        <label class="col-sm-3 control-label">File Size:</label>
+                                        <div class="col-sm-3">
+                                            <input type="text" disabled="" class="form-control" placeholder="10KB">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-10">
                                         <label class="col-sm-3 control-label">Make:</label>
                                         <div class="col-sm-3">
                                             <select class="form-control m-b" name="account">
@@ -225,6 +250,7 @@
                                         </div>
                                         </div>
                                     </div>
+
                                 <div class="form-group">
                                     <div class="col-sm-10">
                                         <label class="col-sm-3 control-label">Year:</label>
@@ -232,71 +258,40 @@
                                             <select class="form-control m-b" name="account">
                                                 <option>2015</option>
                                             </select>
-
-                                            </div>
-                                        <label class="col-sm-3 control-label">ECU ID:</label>
-                                        <div class="col-sm-3">
-                                            <input type="text" class="form-control" placeholder="Id" value="ARB-1234">
                                         </div>
-                                        </div>
-                                    </div>
-                                <div class="form-group">
-                                    <div class="col-sm-10">
-                                        <label class="col-sm-3 control-label">Approved Update File:</label>
-                                        <div class="col-sm-3">
-                                            <input type="text" class="form-control" placeholder="Version" value="Abfm_50815.P">
-                                            </div>
-                                        <label class="col-sm-3 control-label">File Size:</label>
-                                        <div class="col-sm-3">
-                                            <input type="text" class="form-control" placeholder="time" value="150KB">
-                                        </div>
-                                        </div>
-                                    </div>
-                                <div class="form-group">
-                                    <div class="col-sm-10">
-
-                                        <label class="col-sm-3 control-label">Approved Priority:</label>
-                                        <div class="col-sm-3">
-                                            <input type="text" class="form-control" placeholder="Priority" value="Critical">
-                                        </div>
-                                        <label class="col-sm-3 control-label">Update Type:</label>
+                                        <label class="col-sm-3 control-label">Dealer / Owner:</label>
                                         <div class="col-sm-3">
                                             <select class="form-control m-b" name="account">
-                                                <option>Partial</option>
+                                                <option>Dealer</option>
                                             </select>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="col-sm-10">
-
+                                        <label class="col-sm-3 control-label">Continent:</label>
+                                        <div class="col-sm-3">
+                                            <select class="form-control m-b" name="account">
+                                                <option>NA</option>
+                                            </select>
+                                        </div>
                                         <label class="col-sm-3 control-label">Country:</label>
                                         <div class="col-sm-3">
                                             <select class="form-control m-b" name="account">
                                                 <option>US</option>
                                                 </select>
                                             </div>
-                                        <label class="col-sm-3 control-label">Region / State:</label>
-                                        <div class="col-sm-3">
-                                            <select class="form-control m-b" name="account">
-                                                <option>CA</option>
-                                            </select>
-                                        </div>
+
                                         </div>
                                     </div>
 
                                 <div class="form-group">
                                     <div class="col-sm-10">
-                                        <label class="col-sm-3 control-label">Continent:</label>
+
+                                        <label class="col-sm-3 control-label">Region / State:</label>
                                         <div class="col-sm-3">
                                             <select class="form-control m-b" name="account">
-                                                <option>NA</option>
-                                                </select>
-                                            </div>
-                                        <label class="col-sm-3 control-label">Dealer / Owner:</label>
-                                        <div class="col-sm-3">
-                                            <select class="form-control m-b" name="account">
-                                                <option>Dealer</option>
+                                                <option>CA</option>
                                             </select>
                                         </div>
                                         </div>
@@ -317,12 +312,11 @@
                 </div>
                 <input type="file" id="theFile" style="display: none;"/>
             </div>
-            <div class="footer">
-                <div>
-                    <strong>Copyright</strong> Movimento Group &copy;2015
-                </div>
+        </div>
+        <div class="footer">
+            <div>
+                <strong>Copyright</strong> Movimento Group &copy;2015
             </div>
-
         </div>
         <div class="modal inmodal" id="myModal6" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog">
@@ -330,13 +324,13 @@
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
                         <i class="fa fa-laptop modal-icon"></i>
-                        <h4 class="modal-title">Review new campaign you just created</h4>
+                        <h3 class="modal-title">Review New Campaign You Just Created</h3>
                     </div>
                     <div class="modal-body">
-                        <p><strong>For Critical Task20150812_001, you created Campaign20150815_abs, selected 2000 out of 40000 vehicles with ECU ID RGZ-34N to receive Firmware file version AS_20150812.P with approved update time by 12:00AM PST, 08/22/2015'+
-
-                            Deployment manager Tom Krauss is assigned to deploy Campaign20150815_abs
-                        </p>
+                        <h4>For Critical Task20150812_001, you created Campaign20150815_abs, selected </h4>
+                        <h4> 2000 out of 40000 vehicles with ECU ID ARB-1234 to receive </h4>
+                        <h4> firmware update - version AS_20150815.P with approved update due time </h4>
+                        <h4> by 12:00AM PST, 08/22/2015. </h4>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-white" data-dismiss="modal">Edit Campaign</button>
                             <button type="button" class="btn btn-primary">Submit Campaign</button>
@@ -344,6 +338,7 @@
                     </div>
                 </div>
             </div>
+
     </div>
 
 
