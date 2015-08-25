@@ -7488,5 +7488,9 @@ body.skin-3 {
 }
 
 #barChart{
-  height: 300px !important;
+  height: 260px !important;
+}
+
+.mycontent-left {
+  border-right: 1px dashed #333;
 }
